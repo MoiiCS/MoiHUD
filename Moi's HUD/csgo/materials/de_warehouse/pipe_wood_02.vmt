@@ -1,0 +1,6 @@
+LightmappedGeneric
+{
+	$basetexture "de_warehouse/pipe_wood_02"
+	$bumpmap "de_warehouse/wood_planks_3_normal"
+	$surfaceprop Wood
+}

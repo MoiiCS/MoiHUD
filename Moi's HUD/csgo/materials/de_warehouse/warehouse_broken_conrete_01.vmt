@@ -1,0 +1,6 @@
+LightmappedGeneric
+{
+	$basetexture "de_warehouse/models/warehouse_broken_conrete_01"
+	$bumpmap "de_warehouse/models/warehouse_broken_conrete_01_normal"
+	$surfaceprop Concrete
+}

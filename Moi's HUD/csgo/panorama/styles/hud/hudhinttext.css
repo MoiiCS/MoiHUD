@@ -1,0 +1,149 @@
+   
+	         
+	                                                                          
+  
+
+.hud-hint
+{
+	width: 460px;
+	flow-children: none;
+	opacity: 1;
+	horizontal-align: center;
+	                    
+}
+
+.hud-hint--visible
+{
+	width: 460px;
+}
+
+/*
+@keyframes 'hud-hint-FadeIn' 
+{
+  0% {
+    opacity: 1.0;
+    position: 0px 80px 0px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000CC ), color-stop( 0.2, #00000000 ), to( #00000000 ) );
+  }
+  100% {
+    opacity: 1.0;
+    position: 0px 80px 0px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000CC ), color-stop( 0.65, #000000CC ), to( #00000000 ) );
+  }
+}
+*/
+
+.hud-hint_bg
+{
+	
+}
+
+.hud-hint--visible .hud-hint_bg
+{
+	
+}
+
+.hud-hint_icon
+{
+	
+	horizontal-align: left;
+	height: fit-children;
+}
+
+.hud-hint__icon
+{
+	width: 110px;
+	height: 110px;
+	margin-left: 10px;
+	margin-top: -3px;
+	margin-bottom: -1px;
+	overflow: noclip;
+	position: 0px 52px 0px;
+	opacity: 0;
+	transition-duration: 0.066s;
+	transition-delay: 0.066s;
+	transition-property: opacity;
+    transition-timing-function: linear;
+}
+
+.hud-hint--visible .hud-hint__icon
+{
+	opacity: 1.0;
+	transition-duration: 0.066s;
+	transition-delay: 0.25s;
+	transition-property: opacity;
+    transition-timing-function: linear;
+}
+
+.hud-hint__priority-icon .hud-hint__icon
+{
+	
+}
+
+
+.hud-hint .hud-hint__text
+{
+	flow-children: down;   
+	vertical-align: top;
+	horizontal-align: left;
+	height: fit-children;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-left: 124px;
+	width: 55%;
+	overflow: noclip;
+	position: 0px 52px 0px;
+	transition-duration: 0.0s;
+	transition-property: opacity;
+    transition-timing-function: linear;
+	opacity: 0;
+	-s2-mix-blend-mode: SRGBAdditive;
+}
+
+.hud-hint--visible .hud-hint__text
+{
+	opacity: 1;
+	-s2-mix-blend-mode: SRGBAdditive;
+}
+
+.hud-hint__priority-label
+{
+	font-family: Stratum2;
+	horizontal-align: left;
+	opacity: 1.0;
+	text-transform: capitalize;
+	color: #c93121;
+	-s2-mix-blend-mode: SRGBAdditive;
+	font-size: 24px;
+	font-weight: bold;
+	visibility: collapse;
+	letter-spacing: 0px;
+	margin-right: 10px;
+}
+
+.hud-hint__label
+{
+	height: 90px;
+	width: 250px;
+	font-family: Stratum2;
+	horizontal-align: left;
+	height: fit-children;
+	opacity: 1.0;
+	color: #cccccc;
+	-s2-mix-blend-mode: SRGBAdditive;
+	text-transform: capitalize;
+	white-space: normal;                    
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 0px;
+	line-height: 23px;     
+}
+
+                                                                                                                                  
+                                                                                               
+                                                                                                       
+.Language_vietnamese .hud-hint__text Label
+{
+	font-family: 'Arial', 'Arial Unicode MS';
+}
+

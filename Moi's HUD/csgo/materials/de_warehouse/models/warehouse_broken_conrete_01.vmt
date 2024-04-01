@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "de_warehouse/models/warehouse_broken_conrete_01"
+
+	//"$phongexponent" "1"
+	//"$phongtint" "[1 1 1]"
+	//"$phongboost" "1"
+	//"$phongfresnelranges" "[0 0.5 1]"
+
+	$bumpmap "de_warehouse/models/warehouse_broken_conrete_01_normal"
+	$surfaceprop Concrete
+
+
+}

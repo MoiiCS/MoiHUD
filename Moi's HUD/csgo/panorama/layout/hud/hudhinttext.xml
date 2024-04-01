@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/csgostyles.css" />
+		<include src="file://{resources}/styles/hud/hudhinttext.css" />
+	</styles>
+
+	<CSGOHudHintText hittest="false" class="hud-hint">
+		<Panel class="hud-hint_bg" />
+		<Panel class="hud-hint_icon" >
+			<Image class="hud-hint__icon" src=""/>
+		</Panel>
+		<Panel class="hud-hint__text">
+				<Label class="hud-hint__priority-label" text="#SFUIHUD_InfoPanel_PriorityMsgTitle"/>
+				<Label id="HintLabel" class="hud-hint__label"/>
+		</Panel>
+	</CSGOHudHintText>
+</root>

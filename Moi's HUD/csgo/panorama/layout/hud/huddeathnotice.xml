@@ -1,0 +1,60 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/csgostyles.css" />
+		<include src="file://{resources}/styles/hud/huddeathnotice.css" />
+	</styles>
+
+	<snippets>
+		<snippet name="DeathNotice">
+			<Panel class="DeathNotice">
+				<Panel class="DeathNoticeBGBorder">
+					<Image class="DeathNoticeBG" scaling="stretch-to-fit-preserve-aspect"/>
+					<Image class="DeathNoticeBGGradient" src="file://{images}/hud/deathnotice/radialgradient.png" scaling="stretch" />
+				</Panel>
+				<Panel class="DeathNoticeContent">
+					                     
+					<Image id="Revenge" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/revenge.svg" scaling="stretch-to-fit-preserve-aspect" />
+					                        
+					<Image id="Domination" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/domination.svg" scaling="stretch-to-fit-preserve-aspect" />
+					                            
+					<Image id="AttackerBlindIcon" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/blind_kill.svg" scaling="stretch-to-fit-preserve-aspect" />
+					                                        
+					<Label id="Attacker" text="{s:name}" />
+					                                         
+					<Panel id="AssistParent">
+						<Label text="+" />
+						                      
+						<Image id="Flashbang" class="DeathNoticeIcon" src="file://{images}/icons/equipment/flashbang_assist.png" scaling="stretch-to-fit-preserve-aspect" />
+						<Label id="Assister" text="{s:name}" />
+					</Panel>
+					                                                                                                  
+					<Image id="Weapon" class="DeathNoticeIcon WeaponIcon" textureheight="24" scaling="stretch-to-fit-preserve-aspect" />
+					
+					<Image id="NoScopeIcon" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/noscope.svg" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
+					                           
+					<Image id="ThroughSmokeIcon" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/smoke_kill.svg" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
+					                       
+					<Image id="Penetrate" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/penetrate.png" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
+					                      
+					<Image id="HeadShot" class="DeathNoticeIcon" src="file://{images}/hud/deathnotice/headshot.png" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
+					                     
+					<Image id="Suicide" class="DeathNoticeIcon Suicide" src="file://{images}/hud/deathnotice/suicide.png" textureheight="18" scaling="stretch-to-fit-preserve-aspect" />
+					                                       
+					<Label id="Victim" text="{s:name}" />
+				</Panel>
+				<Panel class="DeathNoticeWipeContainer">
+					<Image class="DeathNoticeWipeIcon" src="file://{images}/icons/ui/VoteSurrender.svg" scaling="stretch-to-fit-preserve-aspect" />
+					<Label text="#Survival_SquadWipe_DeathNotice" />
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+
+	<CSGOHudDeathNotice hittest="false">
+
+		<Panel id="VisibleNotices">
+			                                                     
+		</Panel>
+
+	</CSGOHudDeathNotice>
+</root>

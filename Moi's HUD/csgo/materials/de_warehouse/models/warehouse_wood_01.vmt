@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "de_warehouse/models/warehouse_wood_01"
+	$bumpmap "de_warehouse/models/warehouse_wood_01_normal"
+	$surfaceprop Wood
+}

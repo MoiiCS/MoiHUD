@@ -1,0 +1,389 @@
+                                         
+
+@define AddMoneyTime: 2.9s;
+@define RemoveMoneyTime: 2.9s;
+@define AddRemoveMoneyFlashTime: 0.5s;
+
+@define defaultColor: #ffffff;
+@define AddMoneyColor: #9af215;
+@define FlashMoneyColor: #c6e075;
+@define RemoveMoneyColor: #fd2424;
+
+         
+                        
+@define AddMoneyTime--Survival: 0.7s;
+@define AddRemoveMoneyFlashTime--Survival: 0.5s;
+         
+
+                                                                          
+@define AddMoneyXPos: 25px;
+@define RemoveMoneyXPos: 30px;
+
+                    
+@define MoneyYPosAtMoney: 58px;
+@define MoneyYPosModified: 86px;
+@define MoneyYPosVanished: 86px;          
+@define MoneyYPosAddStart: 18px;
+
+                                                                               
+                                                                               
+                                                                               
+
+.money-text-label,
+.money-anim
+{
+    font-family: Stratum2 Bold, 'Arial Unicode MS';
+    font-size: 31px;
+    font-weight: bold;
+}
+
+                                                                                                 
+                                                                         
+.Language_vietnamese .money-text-label,
+.Language_vietnamese .money-anim 
+{
+	font-family: ForceStratum2, 'Arial Unicode MS';
+}
+
+                                                                               
+   
+                                                                               
+
+.money
+{
+    width: fit-children;         
+    height: 140px;
+
+    opacity: 1.0;
+
+    margin-top:-52px;
+    margin-bottom: -12px;
+    z-index: 1;
+
+	transition-property: opacity;
+	transition-timing-function: linear;
+    transition-duration: 0.1s;
+}
+
+.money-text-buy-icon
+{
+	transform: translateX(11px) translateY(2px);
+    width: 32px;
+    height: 32px;
+    -s2-mix-blend-mode: SRGBAdditive;
+	opacity: 0;
+	z-index: 80;
+	margin: 2px;
+}
+.money__in-buy-zone .money-text-buy-icon
+{
+	-s2-mix-blend-mode: SRGBAdditive;
+	z-index: 80;
+	opacity: 1;
+}
+
+.buymenu .buymenu-money .money__in-buy-zone .money-text-buy-icon
+{
+    opacity: 0;
+}
+
+.money-text-explorebonus-icon
+{
+    margin-left: 20px;
+    margin-right: -16px;
+    width: 48px;
+    height: 48px;
+    -s2-mix-blend-mode: SRGBAdditive;
+    visibility: collapse;
+    img-shadow: 1px 1px 2px 1.0 #00000033;
+	z-index: 80;
+}
+.money__has-explorebonus .money-text-explorebonus-icon
+{
+    visibility: visible;
+}
+
+.money-text-bombwavebonus-icon
+{
+    margin-left: 20px;
+    margin-right: -16px;
+    width: 48px;
+    height: 48px;
+    -s2-mix-blend-mode: SRGBAdditive;
+    visibility: collapse;
+    img-shadow: 1px 1px 2px 1.0 #00000033;
+	z-index: 80;
+}
+.money__has-bombwavebonus .money-text-bombwavebonus-icon
+{
+    visibility: visible;
+}
+
+.money-text-bg
+{
+    width: 260px;
+    height: 38px;
+    vertical-align: middle;
+	horizontal-align: left;
+	background-image: url( "file://{images}/hud/money/moneybg.png" );
+	background-size: 100% 100%;
+	margin: 2px;
+	x: -4px;
+}
+
+.survival .money-text-bg
+{
+    height: 40px;
+}
+
+.money-text
+{
+    flow-children: center;
+    vertical-align: middle;
+	text-align: middle;
+	transform: translateX(-5px);
+}
+
+.money-text-label
+{	
+   color: defaultColor;
+   text-shadow-fast: 1px 1px #00000088;
+   text-shadow: 0px 0px 3px 0.0 #000000DD;
+   margin-top: 2px;
+   margin-left: 50px;
+   letter-spacing: -0.4px;
+   -s2-mix-blend-mode: SRGBAdditive;
+   font-size: 32px;
+}
+
+.money-anim
+{
+    visibility: collapse;
+}
+
+.money-anim.money-anim__add
+{
+    visibility: visible;
+
+    color: AddMoneyColor;
+    x: 45px;    
+    y: MoneyYPosAtMoney;
+
+    -s2-mix-blend-mode: SRGBAdditive; 
+
+    opacity: 0.0;
+    animation-name: money-anim__add;
+    animation-duration: AddMoneyTime;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes money-anim__add
+{
+	0%
+	{
+        opacity: 0.0;
+        x: 45px;
+        y: MoneyYPosAddStart;
+        z: 0px;
+    }
+    8%
+    {
+        opacity: 1.0;
+        x: 45px;
+        y: MoneyYPosAddStart;
+        z: 0px;
+    }
+    90%
+    {
+        opacity: 1.0;
+        x: 45px;
+        y: MoneyYPosAddStart;
+        z: 0px;
+    }
+	100%
+	{
+        opacity: 0.0;
+        x: 45px;
+        y: MoneyYPosAtMoney;
+        z: 0px;
+	}
+}
+
+.money-anim.money-anim__remove
+{
+    visibility: visible;
+
+    color: RemoveMoneyColor;    
+    x: 70px;
+    y: MoneyYPosAtMoney;
+
+    opacity: 0.0;
+    animation-name: money-anim__remove;
+	animation-duration: RemoveMoneyTime;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	visibility: collapse;
+}
+
+
+
+
+@keyframes money-anim__remove
+{
+	0%
+	{
+        opacity: 0.0;
+        x: 70px;
+        y: MoneyYPosAtMoney;
+        z: 0px;
+    }
+    8%
+    {
+        opacity: 1.0;
+        x: 70px;
+        y: MoneyYPosModified;
+        z: 0px;
+    }
+    90%
+    {
+        opacity: 1.0;
+        x: 70px;
+        y: MoneyYPosModified;
+        z: 0px;
+    }
+	100%
+	{
+		opacity: 0.0;
+        x: 70px;
+        y: MoneyYPosVanished;
+        z: 0px;
+	}
+}
+
+.money-anim.money-anim__add-flash
+{
+    visibility: visible;
+
+    color: FlashMoneyColor;        
+    x: 45px;
+    y: MoneyYPosAddStart;         
+
+    -s2-mix-blend-mode: SRGBAdditive; 
+
+    opacity: 0.0;
+    animation-name: money-anim__addflash;
+	animation-duration: AddRemoveMoneyFlashTime;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+}
+
+@keyframes money-anim__addflash
+{
+	0%
+	{
+		opacity: 1.0;
+        x: 45px;
+        y: 8px;
+        z: 0px;
+        transform: scale3d( 1, 1, 1 );
+    }
+    100%
+    {
+        opacity: 0.0;
+        transform: scale3d( 2, 2, 1 );
+        x: 45px;
+        y: 32px;
+        z: 0px;
+    }
+}
+
+         
+
+                              
+.money-anim.money-anim__add-survival
+{
+    visibility: visible;
+
+    color: AddMoneyColor;
+    x: 45px;
+    y: 8px;
+
+    opacity: 0.0;
+	animation-name: money-anim__add-survival;
+	animation-duration: AddMoneyTime--Survival;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes 'money-anim__add-survival'
+{
+	0%
+	{
+        opacity: 0.0;
+        x: 45px;
+        y: MoneyYPosVanished;        
+        z: 0px;
+    }
+    13%
+    {
+        opacity: 1.0;
+        x: 45px;
+        y: MoneyYPosModified;
+        z: 0px;
+    }
+    87%
+    {
+        opacity: 1.0;
+        x: 45px;
+        y: MoneyYPosModified;
+        z: 0px;
+    }
+	100%
+	{
+        opacity: 0.0;
+        x: 45px;
+        y: MoneyYPosAtMoney;
+        z: 0px;
+	}
+}
+
+.money-anim.money-anim__add-flash-survival
+{
+    color: FlashMoneyColor;
+    x: 45px;
+    y: 140px;
+
+    opacity: 0.0;
+    animation-name: money-anim__add-flash-survival;
+	animation-duration: AddRemoveMoneyFlashTime--Survival;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes money-anim__add-flash-survival
+{
+	0%
+	{
+		opacity: 1.0;
+        transform: scale3d( 1, 1, 1 );
+        x: 45px;
+        y: 40px;
+        z: 0px;
+    }
+    100%
+    {
+        opacity: 0.0;
+        transform: scale3d( 2, 2, 1 );
+        x: 45px;
+        y: 40px;
+        z: 0px;
+    }
+}
+
+         
+
+.afxhidden {
+	opacity: 0;
+	visibility: collapse;
+}

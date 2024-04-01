@@ -1,0 +1,12 @@
+"LightMappedGeneric"
+{
+	"$basetexture" "de_warehouse/warehouse_wood_blue_01"
+
+	//"$phongexponent" "1"
+	//"$phongtint" "[1 1 1]"
+	//"$phongboost" "1"
+	//"$phongfresnelranges" "[0 0.5 1]"
+
+	"$bumpmap" "de_warehouse/warehouse_wood_blue_01_normal"
+
+}

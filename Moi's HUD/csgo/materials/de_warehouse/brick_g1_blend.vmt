@@ -1,0 +1,21 @@
+WorldVertexTransition
+{
+	$basetexture "de_warehouse/brick_g1"
+	$bumpmap "de_warehouse/brick_g_normals"
+	$surfaceprop Concrete
+
+	$basetexture2 "de_warehouse/brick_i"
+	$bumpmap2 "de_warehouse/brick_g_normals"
+	$surfaceprop2 Concrete
+
+	$blendmodulatetexture "de_warehouse/brick_g_modulate"
+
+	"$normalmapalphaenvmapmask" "1"
+	"$envmap" "env_cubemap"
+	"$envmaptint" 		"[.03 .03 .03]"	
+	
+	"$detail" 				"detail\detailconcrete001a"
+	"$detailscale" 			"[6 6 6 ]"
+	"$detailblendfactor" 	"1"
+
+}

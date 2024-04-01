@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "de_warehouse/models/hydrant_01"
+	$surfaceprop Metal
+}

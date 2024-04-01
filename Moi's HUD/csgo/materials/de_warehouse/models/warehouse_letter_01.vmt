@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "de_warehouse/models/warehouse_letter_01"
+
+	$selfillum "1"
+	$selfillummask "de_warehouse/models/warehouse_letter_02"
+
+	$envmapmask "1"
+
+}

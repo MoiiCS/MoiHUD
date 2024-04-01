@@ -1,0 +1,384 @@
+                                                
+
+                                                                  
+@define CTColor: #6f9ce6;
+@define TColor: #eabe54;
+@define FadedColor: #bababa;
+
+                            
+@define DeathNoticeLifetime: 5.0;				                                       
+@define DeathNoticeLocalPlayerLifetimeMod: 1.5;	                                                            
+												                                                                   
+@define DeathNoticeFadeOutTime: 1.0s;			                      
+
+
+CSGOHudDeathNotice
+{
+	height: fill-parent-flow(1);
+	width: fill-parent-flow(1);
+	margin-top: 72px;
+	horizontal-align: right;
+}
+
+CSGOHudDeathNotice Label
+{
+    font-family: Stratum2, 'Arial Unicode MS';
+}
+
+                                                                                                 
+                                                                         
+.Language_vietnamese CSGOHudDeathNotice Label 
+{
+	font-family: ForceStratum2, 'Arial Unicode MS';
+}
+
+#VisibleNotices
+{
+	height: 100%;
+	flow-children: down;
+	horizontal-align: right;
+}
+
+                                                                               
+                                                                               
+                                                                               
+
+.DeathNotice
+{
+	horizontal-align: right;
+	                      
+	height: 40px;
+	transition-property: position;
+	transition-timing-function: linear;
+	transition-duration: 0.00s;
+	transition-delay: 0.015s;
+}
+
+.DeathNotice.FadeOut .DeathNoticeBGBorder
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-timing-function: linear;
+	transition-duration: 0.01;
+	transition-delay: 1.5;
+}
+
+.DeathNotice.FadeOut .DeathNoticeContent,
+.DeathNotice.FadeOut .DeathNoticeWipeContainer
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-timing-function: linear;
+	transition-duration: 0.01;
+	transition-delay: 1.5;
+	-s2-mix-blend-mode: Additive;
+}
+
+.DeathNoticeBGBorder
+{
+	width: 100%;
+	height: 100%;
+	transition-property: opacity;
+	transition-timing-function: linear;
+	transition-duration: DeathNoticeFadeOutTime;
+	transition-delay: 1.9;
+}
+/* Time For Deathnotice to appear */
+.Available .DeathNoticeBGBorder,
+.Available .DeathNoticeContent,
+.Available .DeathNoticeWipeContainer
+{
+	opacity: 0;
+	transition-property: opacity;
+	transition-timing-function: linear;
+	transition-duration: 0.01s;
+	transition-delay: 0.09s;
+}
+
+.DeathNoticeBG
+{
+	width: 100%;
+	height: 100%;
+	opacity: 1.0;
+	z-index: -50;
+}
+
+.DeathNoticeBGGradient
+{
+	width: 100%;
+	height: 95%;
+	opacity: 0.8;
+	vertical-align: center;
+}
+
+
+                                                                               
+                                                                               
+                                                                               
+
+
+.DeathNotice_Victim .DeathNoticeBG
+{
+	visibility: visible;
+	height: 100%;
+	width: 100%;
+	background-image:  url( "file://{images}/hud/deathnotice/radialgradient.png" ), url( "file://{images}/hud/deathnotice/Deathborder.png" );
+    background-size: 100% 100%;
+	opacity: 0.7;
+}
+
+
+                                                                               
+                                                                               
+                                                                               
+
+.DeathNotice_Killer .DeathNoticeBGBorder
+{
+	visibility: visible;
+	height: 39px;
+	background-image: url( "file://{images}/hud/deathnotice/deathnoticekillerborder.png" );
+    background-img-opacity: 1.0; 
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.DeathNotice_Killer .DeathNoticeBGGradient
+{
+	visibility: collapse;
+}
+
+.DeathNotice_Victim .DeathNoticeBGGradient
+{
+	visibility: collapse;
+}
+
+
+                                                                               
+                                                                               
+                                                                               
+
+.DeathNoticeContent
+{
+	flow-children: right;
+	/*padding: 6px 10px 3px 10px;*/
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: DeathNoticeFadeOutTime;
+	transition-delay: 1.9;
+	z-index: 990;
+}
+
+.DeathNoticeContent Label
+{
+	font-family: Stratum2;
+	font-size: 21px;
+	font-weight: bold;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	letter-spacing: 0.20px;
+	vertical-align: top;
+	max-height: 35px;
+	max-width: 209px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	opacity: 1.0;
+	-s2-mix-blend-mode: SRGBAdditive;
+	z-index: 9000;
+}
+
+.DeathNoticeCTColor
+{
+	color: CTColor;
+	text-shadow: 0px 0px 0px #00000000;
+}
+
+.DeathNoticeTColor
+{
+	color: TColor;
+	text-shadow: 0px 0px 0px #00000000;
+}
+
+.DeathNoticeFadedColor
+{
+	color: FadedColor;
+}
+
+.DeathNoticeIcon
+{
+	vertical-align: top; 
+	visibility: collapse;
+	transform: translateY(7px); 
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: DeathNoticeFadeOutTime;
+	transition-delay: 1.9;
+	-s2-mix-blend-mode: Additive;
+}
+
+.Suicide
+{
+	transform: translateY(2px) translateX(-1px);
+	height: 35px;
+	width: 35px;
+}
+
+
+.WeaponIcon
+{
+	max-width: 61px;
+	max-height: 65px;
+	overflow: shrink;
+}
+
+                                                         
+#Weapon
+{
+	visibility: visible;
+	transform: translateY(7px);
+	margin-left: 1px;
+}
+
+.DeathNoticeSuicide #Weapon
+{
+	visibility: collapse;
+}
+
+#AssistParent
+{
+	visibility: collapse;
+	vertical-align: middle;
+	flow-children: right;
+}
+
+                                          
+                                          
+                                          
+.DeathNoticeWipeContainer
+{
+	visibility: collapse;
+	width: 100%;
+
+	flow-children: left;
+	margin-top: 30px;
+	padding: 0px 10px 0px 10px;
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: DeathNoticeFadeOutTime;
+	transition-delay: 1.9;
+
+	                              
+	background-color: gradient( linear, 100% 100%, 0% 0%, from( #e10000e6 ), color-stop( 0.2, #e10000e6 ), color-stop( 0.4, #e1000066 ), color-stop( 0.8, #e1000011 ), to( #e1000000 ) );
+	border-radius: 3px;
+}
+
+.DeathNoticeWipeContainer Label
+{
+	font-family: Stratum2;
+	font-size: 21px;
+	font-weight: bold;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	vertical-align: top;
+	letter-spacing: 0.45px;
+	-s2-mix-blend-mode: SRGBAdditive;
+	max-height: 22px;
+	max-width: 300px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	z-index: 90;
+}
+
+.DeathNoticeWipeIcon
+{
+	height: 16px;
+	vertical-align: middle;
+	margin: -2px 1px 0px 1px;
+}
+
+
+.DeathNoticeWipe .DeathNoticeWipeContainer,
+.DeathNoticeRevenge #Revenge,
+.DeathNoticeDomination #Domination,
+.DeathNoticePenetrate #Penetrate,
+.DeathNoticeFlashbang #Flashbang,
+.DeathNoticeSuicide #Suicide,
+.DeathNoticeAssist #AssistParent
+{
+	visibility: visible;
+}
+
+.DeathNoticeHeadShot #HeadShot
+{
+	visibility: visible;
+}
+
+.noscope #NoScopeIcon
+{
+    visibility: collapse;
+}
+
+.through-smoke #ThroughSmokeIcon
+{
+    visibility: collapse;
+}
+
+.attacker-blind #AttackerBlindIcon
+{
+    visibility: collapse;
+}
+
+#HeadShot
+{
+	transform: translateY(5px);
+	margin-left: 7px;
+	height: 25px;
+	width: 25px;
+}
+
+#Penetrate
+{
+	transform: translateY(6px);
+	margin-left: 7px;
+	height: 23px;
+	width: 23px;
+}
+
+#Revenge
+{
+	transform: translateY(7px);
+	margin-left: 10px;
+	margin-right: -8px;
+	height: 25px;
+	width: 25px;
+}
+
+#Domination
+{
+	transform: translateY(7px);
+	margin-left: 10px;
+	margin-right: -8px;
+	height: 25px;
+	width: 25px;
+}
+
+#AssistParent
+{
+	height: 40px;
+	transform: translateY(9px);
+}
+
+#Attacker
+{
+	height: 40px;
+	transform: translateY(9px);
+	padding-left: 11px;
+}
+
+#Victim
+{
+	height: 40px;
+	transform: translateY(9px);
+	padding-right: 11px;
+}

@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "de_warehouse/models/warehouse_barrier_01a"
+	$surfaceprop Plastic
+}

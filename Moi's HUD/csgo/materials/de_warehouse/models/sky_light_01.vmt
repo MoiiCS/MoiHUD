@@ -1,0 +1,10 @@
+UnlitGeneric
+{
+	"$basetexture"	"de_warehouse/models/sky_light_01"
+	"$additive"		"1"
+	"$translucent" "1" 
+	"$nocull" "1"
+	"$depthfade" "1"
+	"$model" "1"
+    "srgb?$color2" "[.5 .5 .5]"
+}

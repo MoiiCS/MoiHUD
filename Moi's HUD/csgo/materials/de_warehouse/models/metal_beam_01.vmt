@@ -1,0 +1,31 @@
+VertexLitGeneric
+{
+
+$baseTexture "de_warehouse/models/metal_beam_01"
+
+//$bumpmap "de_warehouse/models/metal_beam_01_normal"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedoboost" "1"
+	"$phongfresnelranges" "[.9 .9 1]"
+	"$phongexponent" 180
+	$blendtintbybasealpha 1
+	
+
+"$normalmapalphaenvmapmask" 1
+
+
+	"$detail" 				"detail\detailconcrete001a"
+	"$detailscale" 			"[6 6 6]"
+	"$detailblendfactor" 	"1"
+
+		
+
+	"$envmaptint" 		"[.2 .2 .2]"
+
+	"$phongalbedotint" "1"
+	"$phongdisablehalflambert" "1"
+
+
+
+}

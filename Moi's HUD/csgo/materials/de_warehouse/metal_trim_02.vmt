@@ -1,0 +1,6 @@
+LightmappedGeneric
+{
+	$basetexture "de_warehouse/models/metal_trim_01"
+	$bumpmap "de_warehouse/metal_trim_01_normal"
+	$surfaceprop Metal
+}

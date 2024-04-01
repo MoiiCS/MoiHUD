@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "de_warehouse/models/skateboard_01"
+	$bumpmap "de_warehouse/models/skateboard_01_nrm"
+}

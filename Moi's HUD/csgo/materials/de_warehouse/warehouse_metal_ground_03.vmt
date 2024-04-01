@@ -1,0 +1,10 @@
+LightmappedGeneric
+{
+	$basetexture "de_warehouse/warehouse_metal_ground_03"
+	"$surfaceprop"            "metal"
+	"$detail"                 "asphalt/hr_c/hr_asphalt_001_detail"
+	"$detailscale"            ".025"
+	"$detailblendfactor"      "0.75"
+	"$basealphaenvmapmask"    "1"
+
+}

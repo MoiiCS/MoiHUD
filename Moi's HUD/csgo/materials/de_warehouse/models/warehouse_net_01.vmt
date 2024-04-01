@@ -1,0 +1,17 @@
+
+"VertexLitGeneric"
+{
+	 // Textures
+	    $basetexture	"de_warehouse/models/warehouse_net_01"
+	    $bumpmap 	"de_warehouse/models/warehouse_net_01_normal"
+
+	$translucent 1
+	"$vertexcolor" "1"
+	"$vertexalpha" "1"
+
+	 // Suraface type
+	    $surfaceprop "plastic"
+
+
+}
+

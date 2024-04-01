@@ -1,0 +1,10 @@
+vertexlitgeneric
+{
+	"$basetexture"            "de_warehouse/models/airduct_hvac_001"
+	"$basealphaenvmapmask"    "1"
+	"$envmap"                 "de_warehouse/models/airduct_hvac_001_cube"
+	"$envmaplightscale"       "1"
+	"$envmaplightscaleminmax" "[0 1.25]"
+	"$envmapcontrast"         "0.25"
+	"$surfaceprop"            "metal"
+}

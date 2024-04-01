@@ -1,0 +1,19 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "de_warehouse/warehouse_graffiti_08"
+
+	
+
+	"$translucent" 			"1"
+	"$alpha "				"0.8"	
+	//"$alphatest" 			"1"
+	//"$allowalphatocoverage"	"1"
+	//"$alphatestreference"	"0.4"
+	//"nocull"				"1"	
+	"$decal" 1
+	"$decalscale" ".25"
+
+	
+
+
+}

@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "de_warehouse/models/pipeset08d_128_001a"
+	$surfaceprop Metal
+}
