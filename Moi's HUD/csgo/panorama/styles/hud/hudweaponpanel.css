@@ -276,7 +276,7 @@ CSGOHudWeaponPanel Label
 	width: 72px;
 	font-size: 44px;                             
     text-shadow: 0px 0px 3px 0.0 #000000DD;
-	-s2-mix-blend-mode: Additive;
+	-s2-mix-blend-mode: SRGBAdditive;
 }
 
 .Ammo__Total
